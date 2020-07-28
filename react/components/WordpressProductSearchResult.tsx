@@ -159,8 +159,8 @@ const WordpressSearchResult: StorefrontFunctionComponent<Props> = ({
                     showCategory
                     showDate
                     showExcerpt
-                    useTextOverlay={false}
                     absoluteLinks={false}
+                    useTextOverlay={false}
                   />
                 </div>
               ))}

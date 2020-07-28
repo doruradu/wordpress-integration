@@ -31,7 +31,6 @@ const WordpressAllPosts: StorefrontFunctionComponent<AllPostsProps> = ({
 }) => {
   const {
     route: { id, params },
-    pages,
     query,
     setQuery,
     navigate,
@@ -59,7 +58,7 @@ const WordpressAllPosts: StorefrontFunctionComponent<AllPostsProps> = ({
       totalItems={data?.wpPosts?.total_count ?? 0}
       onRowsChange={(event: any) => {
         setPage(1)
-        if (pages[id].path.indexOf(':page') > 0) {
+        if (params.page) {
           params.page = '1'
           navigate({
             page: id,
@@ -86,7 +85,7 @@ const WordpressAllPosts: StorefrontFunctionComponent<AllPostsProps> = ({
         if (page <= 1) return
         const prevPage = page - 1
         setPage(prevPage)
-        if (pages[id].path.indexOf(':page') > 0) {
+        if (params.page) {
           params.page = prevPage.toString()
           navigate({
             page: id,
@@ -111,7 +110,7 @@ const WordpressAllPosts: StorefrontFunctionComponent<AllPostsProps> = ({
       onNextClick={() => {
         const nextPage = page + 1
         setPage(nextPage)
-        if (pages[id].path.indexOf(':page') > 0) {
+        if (params.page) {
           params.page = nextPage.toString()
           navigate({
             page: id,
@@ -175,7 +174,7 @@ const WordpressAllPosts: StorefrontFunctionComponent<AllPostsProps> = ({
                   date={post.date}
                   id={post.id}
                   slug={post.slug}
-                  link={post.link}
+                  link={post.slug}
                   customDomainSlug={customDomainSlug}
                   image={post.featured_media?.source_url ?? ''}
                   altText={post.featured_media?.alt_text ?? ''}
@@ -184,8 +183,8 @@ const WordpressAllPosts: StorefrontFunctionComponent<AllPostsProps> = ({
                   showCategory
                   showDate
                   showExcerpt
-                  useTextOverlay={false}
                   absoluteLinks={false}
+                  useTextOverlay={false}
                 />
               </div>
             ))}

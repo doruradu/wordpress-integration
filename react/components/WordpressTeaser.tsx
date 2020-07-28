@@ -86,6 +86,7 @@ const WordpressTeaser: FunctionComponent<TeaserProps> = ({
                   params={{
                     categoryslug: categorySlug,
                     customdomainslug: customDomainSlug,
+                    page: '1',
                   }}
                 >
                   {category}
@@ -142,6 +143,7 @@ const WordpressTeaser: FunctionComponent<TeaserProps> = ({
                         {title}
                       </Link>
                     )}
+                    
                   </div>
                   {(showCategory || showDate || showAuthor) && (
                     <div
@@ -154,6 +156,7 @@ const WordpressTeaser: FunctionComponent<TeaserProps> = ({
                             params={{
                               categoryslug: categorySlug,
                               customdomainslug: customDomainSlug,
+                              page: '1',
                             }}
                             className={'white'}
                           >
@@ -175,6 +178,7 @@ const WordpressTeaser: FunctionComponent<TeaserProps> = ({
             </div>
           ) : (
             <Fragment>
+
               {absoluteLinks ? (
                 <Link
                 to={link}
@@ -199,7 +203,11 @@ const WordpressTeaser: FunctionComponent<TeaserProps> = ({
                   alt={altText}
                 ></img>
               </Link>
-               )}
+              )}
+              
+
+
+
               <h3
                 className={`${handles.teaserTitle} t-heading-3 mv0 pt4 pb6 ph6`}
               >
@@ -220,6 +228,7 @@ const WordpressTeaser: FunctionComponent<TeaserProps> = ({
                   <span dangerouslySetInnerHTML={{ __html: sanitizedTitle }} />
                 </Link>
                 )}
+                
               </h3>
             </Fragment>
           )}
@@ -245,6 +254,7 @@ const WordpressTeaser: FunctionComponent<TeaserProps> = ({
             <span dangerouslySetInnerHTML={{ __html: sanitizedTitle }} />
           </Link>
           )}
+          
         </h3>
       )}
 

@@ -190,8 +190,8 @@ WordpressLatestPostsBlock.defaultProps = {
   showDates: true,
   showAuthors: false,
   showExcerpts: false,
-  customDomain: undefined,
   absoluteLinks: false,
+  customDomain: undefined,
   customDomainSlug: undefined,
 }
 

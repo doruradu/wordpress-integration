@@ -164,6 +164,7 @@ const WordpressPostInner: FunctionComponent<{
                 page="store.blog-category"
                 params={{
                   categoryslug: cat.slug,
+                  page: '1',
                   customdomainslug: props.customDomainSlug,
                 }}
               >

@@ -6,18 +6,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.0] - 2020-07-14
-
-### Changed
-
-- Update docs and add app store assets
-
-## [1.6.1] - 2020-06-12
-
-### Changed
-
-- Improvements to URL-controlled pagination
-
 ## [1.6.0] - 2020-06-04
 
 ### Added

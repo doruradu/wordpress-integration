@@ -83,8 +83,8 @@ const WordpressCategoryBlock: StorefrontFunctionComponent<WPCategoryBlockProps> 
                     showDate={showDates}
                     showAuthor={showAuthors}
                     showExcerpt={showExcerpts}
-                    useTextOverlay={useTextOverlays}
                     absoluteLinks={absoluteLinks}
+                    useTextOverlay={useTextOverlays}
                   />
                 </div>
               )
@@ -104,6 +104,7 @@ const WordpressCategoryBlock: StorefrontFunctionComponent<WPCategoryBlockProps> 
               page="store.blog-category"
               params={{
                 categoryslug: data?.wpCategory?.slug,
+                page: '1',
                 customdomainslug: customDomainSlug,
               }}
               className={`${handles.categoryBlockLink}`}

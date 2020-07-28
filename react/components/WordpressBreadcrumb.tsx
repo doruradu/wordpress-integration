@@ -47,6 +47,7 @@ const WordpressCategoryBreadcrumb: FunctionComponent<CategoryProps> = ({
       <Container className={`${handles.breadcrumbContainer} pt2 pb8`}>
         <Link
           page="store.blog-home"
+          params={{ page: '1' }}
           className={`${handles.breadcrumbHomeLink}`}
         >
           Blog Home
@@ -76,6 +77,7 @@ const WordpressSinglePostBreadcrumb: FunctionComponent<SinglePostProps> = ({
       <Container className={`${handles.breadcrumbContainer} pt2 pb8`}>
         <Link
           page="store.blog-home"
+          params={{ page: '1' }}
           className={`${handles.breadcrumbHomeLink}`}
         >
           Blog Home
@@ -85,6 +87,7 @@ const WordpressSinglePostBreadcrumb: FunctionComponent<SinglePostProps> = ({
           page="store.blog-category"
           params={{
             categoryslug: data.wpPosts.posts[0].categories[0].slug,
+            page: '1',
             customdomainslug: customDomainSlug,
           }}
           className={`${handles.breadcrumbLink}`}
@@ -138,6 +141,7 @@ const WordpressBreadcrumb: StorefrontFunctionComponent<Props> = ({
         <Link
           page="store.blog-home"
           params={{
+            page: '1',
             customdomainslug: params.customdomainslug,
           }}
           className={`${handles.breadcrumbHomeLink}`}
@@ -166,7 +170,11 @@ const WordpressBreadcrumb: StorefrontFunctionComponent<Props> = ({
   // else
   return (
     <Container className={`${handles.breadcrumbContainer} pt2 pb8`}>
-      <Link page="store.blog-home" className={`${handles.breadcrumbHomeLink}`}>
+      <Link
+        page="store.blog-home"
+        params={{ page: '1' }}
+        className={`${handles.breadcrumbHomeLink}`}
+      >
         Blog Home
       </Link>
     </Container>
